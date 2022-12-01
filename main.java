@@ -15,7 +15,7 @@ public class main {
         while(true) {
             System.out.println(menu);
             Scanner in1 = new Scanner(System.in); //для ввода с консоли
-            System.out.print("Выберите команду: "); 
+            System.out.print("Выберите команду1: "); 
             int choice = in1.nextInt(); // ввод номера из меню
 
             switch (choice) {
@@ -96,8 +96,8 @@ public class main {
                             }
                         }
                     }
-                    Comparator<String> stringLengthComparator = new StringLengthSort();
-                    Collections.sort(sortedStrings, stringLengthComparator); // sorting
+                    Comparator<String> stringLengthComparator = new StringLengthSort(); // создаю объект компаратор
+                    Collections.sort(sortedStrings, stringLengthComparator); // сортировка
                     for(Object str : sortedStrings){
                         System.out.println(str.toString() + " : " + str.toString().length() + " букв ");
                     }
